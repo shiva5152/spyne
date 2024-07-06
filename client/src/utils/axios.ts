@@ -1,7 +1,8 @@
 import axios from "axios";
+const serverUrl = process.env.NEXT_PUBLIC_SERVER_ENDPOINT || "http://localhost:8000";
 const instance = axios.create({
     // development
-    baseURL: `${process.env.NEXT_PUBLIC_SERVER_ENDPOINT}/api/v1`,
+    baseURL: `${serverUrl}/api/v1`,
     withCredentials: true,
 
 });
